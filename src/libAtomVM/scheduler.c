@@ -104,6 +104,8 @@ Context *scheduler_next(GlobalContext *global, Context *c)
     UNUSED(global);
     c->reductions += DEFAULT_REDUCTIONS_AMOUNT;
 
+    sys_consume_pending_events(global);
+
     if (global->next_timeout_at.tv_sec | global->next_timeout_at.tv_nsec) {
         make_ready_expired_contexts(global);
     }
