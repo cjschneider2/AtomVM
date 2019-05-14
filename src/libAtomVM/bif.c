@@ -27,10 +27,15 @@
 #include "utils.h"
 
 //Ignore warning caused by gperf generated code
+#ifdef _MSC_VER
+#include "bifs_hash.h"
+#elif defined(__GNUC__)
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #include "bifs_hash.h"
 #pragma GCC diagnostic pop
+#endif
+
 
 #define RAISE_ERROR(error_type_atom) \
     ctx->x[0] = ERROR_ATOM; \

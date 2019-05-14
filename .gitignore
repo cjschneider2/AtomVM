@@ -1,3 +1,6 @@
+.github
+.idea
+cmake-build-*
 *.avm
 *.beam
 *.o

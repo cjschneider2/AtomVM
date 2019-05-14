@@ -58,7 +58,7 @@ term socket_tuple_from_addr(Context *ctx, uint32_t addr)
     return port_create_tuple_n(ctx, 4, terms);
 }
 
-term socket_create_packet_term(Context *ctx, const char *buf, ssize_t len)
+term socket_create_packet_term(Context *ctx, const char *buf, size_t len)
 {
     return term_from_literal_binary((void *)buf, len, ctx);
 }

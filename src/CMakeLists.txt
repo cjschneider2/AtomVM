@@ -13,7 +13,8 @@ if((${CMAKE_SYSTEM_NAME} STREQUAL "Darwin") OR
    (${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD"))
     add_subdirectory(platforms/generic_unix)
 else()
-    message(FATAL_ERROR "Unsupported platform: ${CMAKE_SYSTEM_NAME}")
+    #message(FATAL_ERROR "Unsupported platform: ${CMAKE_SYSTEM_NAME}")
+    add_subdirectory(platforms/windows)
 endif()
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")

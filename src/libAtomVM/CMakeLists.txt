@@ -63,12 +63,12 @@ set(SOURCE_FILES
     valueshashtable.c
 )
 
-find_package(ZLIB)
-if (ZLIB_FOUND)
-    add_definitions(-DWITH_ZLIB)
-else()
+#find_package(ZLIB)
+#if (ZLIB_FOUND)
+#    add_definitions(-DWITH_ZLIB)
+#else()
     set(ZLIB_LIBRARIES "")
-endif (ZLIB_FOUND)
+#endif (ZLIB_FOUND)
 
 function(gperf_generate input output)
     add_custom_command(

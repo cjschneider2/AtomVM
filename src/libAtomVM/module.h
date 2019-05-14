@@ -34,6 +34,10 @@
 #include "context.h"
 #include "globalcontext.h"
 
+// #define PACK( __Declaration__ ) __Declaration__ __attribute__((packed))
+#define PACK( __Declaration__ ) __pragma ( pack(push, 1) ) __Declaration__ __pragma( pack(pop) )
+
+PACK(
 typedef struct
 {
     char magic[4];
@@ -45,7 +49,7 @@ typedef struct
     uint32_t functions_count;
 
     uint8_t code[1];
-} __attribute__((packed)) CodeChunk;
+}) CodeChunk;
 
 struct ExportedFunction;
 
