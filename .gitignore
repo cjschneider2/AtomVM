@@ -1,7 +1,17 @@
+
+% Build artifacts
 *.avm
 *.beam
 *.o
 build/**
-xcode/**
+cmake-build-*/
+
+% code gen
 src/platforms/esp32/build/**
 src/platforms/esp32/build/**/*.d
+
+% project files
+.github/
+.idea/
+xcode/**
+
