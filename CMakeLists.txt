@@ -5,7 +5,9 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
 
 find_package(Elixir)
 
-add_subdirectory(src)
+add_subdirectory(src/c)
+add_subdirectory(src/rust)
+
 add_subdirectory(tests)
 add_subdirectory(tools/packbeam)
 if (NOT "${CMAKE_GENERATOR}" MATCHES "Xcode")

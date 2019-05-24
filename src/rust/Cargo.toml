@@ -1,0 +1,15 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["Charles J. Schneider <schneider@br-tech.de>"]
+edition = "2018"
+
+[lib]
+name = "rust"
+crate-type = ["staticlib"]
+
+[dependencies]
+libc = "*"
+
+[build-dependencies]
+cbindgen = "0.8.7"

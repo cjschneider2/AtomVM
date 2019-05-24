@@ -1,0 +1,20 @@
+
+include_guard = "ATOMVM_LIBRUST_H"
+
+autogen_warning = "/* Warning this is an automatically generated file! */"
+
+include_version = true
+
+tab_width = 4
+
+language = "C"
+
+documentation_style = "C99"
+
+sys_includes = ["stdio.h"]
+
+[export]
+include = ["TERM_BOXED_VALUE_TAG"]
+
+[export.rename]
+"File" = "FILE*"
